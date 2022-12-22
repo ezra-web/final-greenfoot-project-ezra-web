@@ -48,6 +48,7 @@ public class Dino extends Actor
     
     /**
      * This new movement makes for more intresting gameplay
+     * left key makes them turn leftwards and the same for Right key
      */
     
     public void act()
