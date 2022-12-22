@@ -19,7 +19,10 @@ public class MyWorld extends World
         super(800, 400, 1);
         
         Dino player1 = new Dino();
-        addObject(player1, 300, 300);
+        addObject(player1, 50, 300);
+        
+        Player2 player2 = new Player2();
+        addObject(player2, 750, 300);
         
     }
 }

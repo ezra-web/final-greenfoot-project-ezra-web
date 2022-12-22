@@ -16,17 +16,17 @@ public class Dino extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
-    GreenfootImage[] idleRight = new GreenfootImage[6];
+    GreenfootImage[] walking = new GreenfootImage[6];
     //GreenfootImage[] idleLeft = new GreenfootImage[6];
     
     public Dino()
     {
-        for(int i = 0; i < idleRight.length; i++)
+        for(int i = 0; i < walking.length; i++)
         {
-            idleRight[i] = new GreenfootImage("images/Dino walking/walk" + i + ".png");
-            idleRight[i].scale(60,60);
+            walking[i] = new GreenfootImage("images/Dino walking/walk" + i + ".png");
+            walking[i].scale(60,60);
         }
-        setImage(idleRight[0]);
+        setImage(walking[0]);
     }
     
     /**
@@ -40,25 +40,24 @@ public class Dino extends Actor
     {
         if(timer.millisElapsed() > 140)
         {
-            setImage(idleRight[imageIndex]);
-            imageIndex = (imageIndex + 1) % idleRight.length;
+            setImage(walking[imageIndex]);
+            imageIndex = (imageIndex + 1) % walking.length;
             timer.mark();
         }
     }
     
     /**
      * This new movement makes for more intresting gameplay
-     * left key makes them turn leftwards and the same for Right key
      */
     
     public void act()
     {
         move(3);
-        if(Greenfoot.isKeyDown("right"))
+        if(Greenfoot.isKeyDown("2"))
         {
             turn(3);
         }
-        if(Greenfoot.isKeyDown("left"))
+        if(Greenfoot.isKeyDown("1"))
         {
             turn(-3);
         }
